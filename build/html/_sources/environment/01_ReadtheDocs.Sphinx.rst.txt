@@ -23,6 +23,7 @@ Linux 工具教程。
 * 精确的语法高亮: 基于 Pygments 自动生成语法高亮
 * 方便离线传送
 更多介绍，请看此处：Sphinx 使用手册。
+#. https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
 注：以下操作默认你熟悉命令行操作。
 
 1. 安装 Sphinx
@@ -121,7 +122,7 @@ Mac 系统下安装极简，一行代码搞定::
 ::
 
     ^^^^^
-    ``.. toctree::``
+    .. toctree::
         :maxdepth: 2
         :glob:
     
@@ -198,7 +199,7 @@ Mac 系统下安装极简，一行代码搞定::
     包含数据科学的基础工具，如：Jupyter、Linux，以及 Python 基本的数据科学包 Numpy，画图包 Matplotlib;
     
     
-    \.\. toctree\:\:
+    .. toctree::
         :maxdepth: 2
         :numbered: 2
     
@@ -212,5 +213,5 @@ Mac 系统下安装极简，一行代码搞定::
 ￼
 链接：http://ayuan.readthedocs.io/en/latest/index.html ,有三个索引，下一个，上一个都非常顺畅。
 其他
-reStructureText 语法很简单，不建议刻意去学，如果习惯用 Markdown，建议用 pandoc 一键转化即可.
+reStructureText 语法很简单，不建议刻意去学，如果习惯用 Markdown，建议用 pandoc: http://pandoc.org/try/ 一键转化即可.
 ￼

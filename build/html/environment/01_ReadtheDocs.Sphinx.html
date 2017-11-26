@@ -187,6 +187,7 @@ Linux 工具教程。</p>
 * 精确的语法高亮: 基于 Pygments 自动生成语法高亮
 * 方便离线传送
 更多介绍，请看此处：Sphinx 使用手册。
+#. <a class="reference external" href="https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html">https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html</a>
 注：以下操作默认你熟悉命令行操作。</p>
 <p>1. 安装 Sphinx
 Mac 系统下安装极简，一行代码搞定:</p>
@@ -258,14 +259,14 @@ make html后，效果如下：
 <p>会发现明明是2个文档，左边却 有 3个标题，因为主索引是按一级标题的数量来索引的，所以这种方式不可取，标题一多会很乱，好的办法是创建二级索引：
 因为我要建的板块是3个，分别为数据科学「入门篇」、「基础篇」、「工具篇」，所以先把主索引 index.rst 改为：
 目录：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>^^^^^
-``.. toctree::``
-    :maxdepth: 2
-    :glob:
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">^^^^^</span>
+<span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="p">:</span><span class="n">glob</span><span class="p">:</span>
 
-    beginning/index
-    base/index
-    tool/index
+    <span class="n">beginning</span><span class="o">/</span><span class="n">index</span>
+    <span class="n">base</span><span class="o">/</span><span class="n">index</span>
+    <span class="n">tool</span><span class="o">/</span><span class="n">index</span>
 </pre></div>
 </div>
 <p>然后在 source 目录下创建 3个目录 ，每个目录下创建一个 index.rst 文件，也就是二级索引文件。</p>
@@ -326,7 +327,7 @@ Jupyter 基础
 包含数据科学的基础工具，如：Jupyter、Linux，以及 Python 基本的数据科学包 Numpy，画图包 Matplotlib;
 
 
-\.\. toctree\:\:
+.. toctree::
     :maxdepth: 2
     :numbered: 2
 
@@ -341,7 +342,7 @@ Jupyter 基础
 ￼
 链接：<a class="reference external" href="http://ayuan.readthedocs.io/en/latest/index.html">http://ayuan.readthedocs.io/en/latest/index.html</a> ,有三个索引，下一个，上一个都非常顺畅。
 其他
-reStructureText 语法很简单，不建议刻意去学，如果习惯用 Markdown，建议用 pandoc 一键转化即可.
+reStructureText 语法很简单，不建议刻意去学，如果习惯用 Markdown，建议用 pandoc: <a class="reference external" href="http://pandoc.org/try/">http://pandoc.org/try/</a> 一键转化即可.
 ￼</p>
 </div>
 

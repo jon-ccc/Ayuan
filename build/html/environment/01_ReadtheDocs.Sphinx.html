@@ -188,8 +188,10 @@ Linux 工具教程。</p>
 <li>精确的语法高亮: 基于 Pygments 自动生成语法高亮</li>
 <li>方便离线传送</li>
 </ul>
-<p>更多介绍，请看此处：Sphinx 使用手册。
-#. <a class="reference external" href="https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html">https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html</a></p>
+<p>更多介绍，请看此处：Sphinx 使用手册。</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html">https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html</a></li>
+</ol>
 <p>注：以下操作默认你熟悉命令行操作。</p>
 <p>1. 安装 Sphinx
 Mac 系统下安装极简，一行代码搞定:</p>
@@ -243,11 +245,15 @@ $ git push origin master
 </pre></div>
 </div>
 <p>注意：[yourusename]/[yourrepository] 换成你的 github 名和仓库名。</p>
-<p>3. 导入到 ReadtheDocs
-* GitHub 里选择仓库，然后依次点击 Setting =&gt; Service =&gt; Add service =&gt; ReadTheDocs,激活这个选项。</p>
+<ol class="arabic simple" start="3">
+<li>导入到 ReadtheDocs</li>
+</ol>
+<ul class="simple">
+<li>GitHub 里选择仓库，然后依次点击 Setting =&gt; Service =&gt; Add service =&gt; ReadTheDocs,激活这个选项。</li>
+</ul>
 <p>￼
-* 到 ReadtheDocs import 这个仓库，导入成功后，点击阅读文档，便可看到 Web 效果了。
-“,    没有账号的话就申请一个,官网: <a class="reference external" href="https://readthedocs.org">https://readthedocs.org</a></p>
+* 到 ReadtheDocs import 这个仓库，导入成功后，点击阅读文档，便可看到 Web 效果了。</p>
+<p>“,    没有账号的话就申请一个,官网: <a class="reference external" href="https://readthedocs.org">https://readthedocs.org</a></p>
 <p>4. 配置目录结构
 到了这一步，基本上已经搭建了，但这个时候直接写文档是还不够的。目录结构需要配置下。
 假如我要添加两个文档 example.rst 和 rest_eazy.rst 到索引 index.rst 里：</p>
@@ -291,9 +297,9 @@ $ touch beginning/index.rst base/index.rst tool/inde.rst
 - 数据绘图（Seabornd)
 </pre></div>
 </div>
-<p>参照目录创建文件，如 入门篇，则在 beginning 目录下创建如下文件：
-“, touch 01_linux.rst 02_ipython.rst 03_numpy.rst 04_matplotlib.rst 05_seaborn.rst
-每个文件里写上 一级标题，然后检查下：</p>
+<p>参照目录创建文件，如 入门篇，则在 beginning 目录下创建如下文件：</p>
+<p>“, touch 01_linux.rst 02_ipython.rst 03_numpy.rst 04_matplotlib.rst 05_seaborn.rst</p>
+<p>每个文件里写上 一级标题，然后检查下：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$ tree beginning -L 1
 beginning
 ├── 01_linux.rst

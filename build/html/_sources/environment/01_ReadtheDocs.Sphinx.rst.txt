@@ -32,6 +32,7 @@ Linux 工具教程。
 * 方便离线传送
 
 更多介绍，请看此处：Sphinx 使用手册。
+
 #. https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
 
 注：以下操作默认你熟悉命令行操作。
@@ -106,10 +107,12 @@ Mac 系统下安装极简，一行代码搞定::
 注意：[yourusename]/[yourrepository] 换成你的 github 名和仓库名。
 
 3. 导入到 ReadtheDocs
+
 * GitHub 里选择仓库，然后依次点击 Setting => Service => Add service => ReadTheDocs,激活这个选项。
        
 ￼
 * 到 ReadtheDocs import 这个仓库，导入成功后，点击阅读文档，便可看到 Web 效果了。
+
 ",    没有账号的话就申请一个,官网: https://readthedocs.org
 
 
@@ -169,7 +172,9 @@ Mac 系统下安装极简，一行代码搞定::
 
 
 参照目录创建文件，如 入门篇，则在 beginning 目录下创建如下文件：
+
 ", touch 01_linux.rst 02_ipython.rst 03_numpy.rst 04_matplotlib.rst 05_seaborn.rst
+
 每个文件里写上 一级标题，然后检查下：
 
 ::

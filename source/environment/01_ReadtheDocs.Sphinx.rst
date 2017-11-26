@@ -32,8 +32,7 @@ Linux 工具教程。
 * 方便离线传送
 
 更多介绍，请看此处：Sphinx 使用手册。
-
-1. https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
+#. https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
 
 注：以下操作默认你熟悉命令行操作。
 

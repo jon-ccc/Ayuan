@@ -8,7 +8,9 @@
 找了很多的共聚，有以下几个解决方案，优劣势也很明显。
 
 * 自有博客，跟散文堆在一起，不便索引。
+
 * GitHub Wiki，适合做知识整理，但排版一般，不方便本地查看。
+
 * GitBook，丑，慢。
 
 经过一些比较和调查，最终锁定 Sphinx + GitHub + ReadtheDocs 作为文档写作工具。用 Sphinx 生成文档，GitHub 托管文档，再导入到 ReadtheDocs。
@@ -16,12 +18,19 @@ Sphinx 是一个基于 Python 的文档生成工具，最早只是用来生成 P
 Linux 工具教程。
 
 引用几点 Sphinx 的优势：
+
 * 丰富的输出格式: 支持 HTML (包括 Windows 帮助文档), LaTeX (可以打印PDF版本), manual pages（man 文档）, 纯文本
+
 * 完备的交叉引用: 语义化的标签,并可以自动化链接函数,类,引文,术语及相似的片段信息
+
 * 明晰的分层结构: 可以轻松的定义文档树,并自动化链接同级/父级/下级文章
+
 * 美观的自动索引: 可自动生成美观的模块索引
+
 * 精确的语法高亮: 基于 Pygments 自动生成语法高亮
+
 * 方便离线传送
+
 更多介绍，请看此处：Sphinx 使用手册。
 
 1. https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html

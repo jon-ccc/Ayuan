@@ -1,7 +1,7 @@
 # Readthedocs  搭建与使用
 
 
-如何用 ReadtheDocs Sphinx 
+ReadtheDocs Sphinx 搭建与使用
 
 
 .. toctree::

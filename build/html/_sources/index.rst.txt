@@ -11,6 +11,7 @@ Welcome to Note's documentation!
     :caption: Contents:
     :glob:
 
+    course/index
     beginning/index
     base/index
     tool/index

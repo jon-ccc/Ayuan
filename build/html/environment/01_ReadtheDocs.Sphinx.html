@@ -198,7 +198,7 @@ Mac 系统下安装极简，一行代码搞定:</p>
 <p>我因为之前安装过 Anaconda，自带了 sphinx，便省略这步了。更多安装方法，请看此处：Install Sphinx。</p>
 <p>2. 创建工程
 创建工程也就是创建文档。这步很简单，进入需要创建工程的目录，比如我的是 /Users/Scott/Documents/2.创造乐趣, 创建一个名为 DataBook 的文件夹，你可以用别的你想用的名字。
-创建:</p>
+创建</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$ pwd
 /Users/Scott/Documents/
 创建文件夹
@@ -207,7 +207,7 @@ mydoc 创建好了，进入该目录：
 $ cd mydoc
 </pre></div>
 </div>
-<p>输入sphinx-quickstart，接下来程序会提示你输入一些选项，基本上按 Return 就好了，有些地方看提示注意下，不懂的话可以参考这里：建立sphinx工程。:</p>
+<p>输入sphinx-quickstart，接下来程序会提示你输入一些选项，基本上按 Return 就好了，有些地方看提示注意下，不懂的话可以参考这里：建立sphinx工程。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$ tree
 ├── Makefile            #
 ├── README.md       # 自己建的,首页大纲
@@ -224,30 +224,29 @@ $ cd mydoc
 基本完成，可以生成html形式的文档了:
 #. make html</p>
 <p>配置（conf.py）
-如果没有什么特殊需要，改主题，推荐ReadtheDoc的主题。把 conf.py 里面的这句:</p>
+如果没有什么特殊需要，改主题，推荐ReadtheDoc的主题。把 conf.py 里面的这句</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;alabaster&#39;</span>
 <span class="n">换成</span>
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>将 Sphnix 生成的文档和配置 push 到远程 github::</dt>
-<dd>$ git init
+<p>将 Sphnix 生成的文档和配置 push 到远程 github:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git init
 $ git add .
-$ git commit -m “sphinx start”
-$ git remote add origin <a class="reference external" href="https://github.com/[yourusename]/[yourrepository].git">https://github.com/[yourusename]/[yourrepository].git</a>
-$ git push origin master</dd>
-</dl>
+$ git commit -m &quot;sphinx start&quot;
+$ git remote add origin https://github.com/[yourusename]/[yourrepository].git
+$ git push origin master
+</pre></div>
+</div>
 <p>注意：[yourusename]/[yourrepository] 换成你的 github 名和仓库名。</p>
 <p>3. 导入到 ReadtheDocs
 * GitHub 里选择仓库，然后依次点击 Setting =&gt; Service =&gt; Add service =&gt; ReadTheDocs,激活这个选项。</p>
 <p>￼
-* 到 ReadtheDocs import 这个仓库，导入成功后，点击阅读文档，便可看到 Web 效果了。</p>
-<blockquote>
-<div>没有账号的话就申请一个,官网: <a class="reference external" href="https://readthedocs.org">https://readthedocs.org</a></div></blockquote>
+* 到 ReadtheDocs import 这个仓库，导入成功后，点击阅读文档，便可看到 Web 效果了。
+#.    没有账号的话就申请一个,官网: <a class="reference external" href="https://readthedocs.org">https://readthedocs.org</a></p>
 <p>4. 配置目录结构
 到了这一步，基本上已经搭建了，但这个时候直接写文档是还不够的。目录结构需要配置下。
-假如我要添加两个文档 example.rst 和 rest_eazy.rst 到索引 index.rst 里：:</p>
+假如我要添加两个文档 example.rst 和 rest_eazy.rst 到索引 index.rst 里：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>.. toctree::
    :maxdepth: 2
 
@@ -258,15 +257,15 @@ make html后，效果如下：
 </div>
 <p>会发现明明是2个文档，左边却 有 3个标题，因为主索引是按一级标题的数量来索引的，所以这种方式不可取，标题一多会很乱，好的办法是创建二级索引：
 因为我要建的板块是3个，分别为数据科学「入门篇」、「基础篇」、「工具篇」，所以先把主索引 index.rst 改为：
-目录：:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">^^^^^</span>
-<span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
-    <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
-    <span class="p">:</span><span class="n">glob</span><span class="p">:</span>
+目录：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>^^^^^
+``.. toctree::``
+    :maxdepth: 2
+    :glob:
 
-    <span class="n">beginning</span><span class="o">/</span><span class="n">index</span>
-    <span class="n">base</span><span class="o">/</span><span class="n">index</span>
-    <span class="n">tool</span><span class="o">/</span><span class="n">index</span>
+    beginning/index
+    base/index
+    tool/index
 </pre></div>
 </div>
 <p>然后在 source 目录下创建 3个目录 ，每个目录下创建一个 index.rst 文件，也就是二级索引文件。</p>
@@ -275,61 +274,69 @@ $ touch beginning/index.rst base/index.rst tool/inde.rst
 </pre></div>
 </div>
 <p>做完这步后，把书的大纲理一下，写到 BookData 目录底下的 README.md 文件里：</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><p class="first"># Python 和数据科学</p>
-<p>### 全书目录：</p>
-<p>入门篇：</p>
-<ul class="last simple">
-<li>Linux</li>
-<li>ipython</li>
-<li>数值计算（Numpy）</li>
-<li>数据绘图（Matplotlib）</li>
-<li>数据绘图（Seabornd)</li>
-</ul>
-</dd>
-</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span># Python 和数据科学
+
+### 全书目录：
+
+入门篇：
+
+- Linux
+- ipython
+- 数值计算（Numpy）
+- 数据绘图（Matplotlib）
+- 数据绘图（Seabornd)
+</pre></div>
+</div>
 <p>参照目录创建文件，如 入门篇，则在 beginning 目录下创建如下文件：
 #. touch 01_linux.rst 02_ipython.rst 03_numpy.rst 04_matplotlib.rst 05_seaborn.rst
 每个文件里写上 一级标题，然后检查下：</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><p class="first">$ tree beginning -L 1
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ tree beginning -L 1
 beginning
 ├── 01_linux.rst
 ├── 02_ipython.rst
 ├── 03_numpy.rst
 ├── 04_matplotlib.rst
 ├── 05_seaborn.rst
-└── index.rst</p>
-<p class="last">$ cat source/beginning/*
+└── index.rst
+
+$ cat source/beginning/*
 Linux 基础
-=========================</p>
-</dd>
-<dt>然后把文件名添加到二级索引 beginning/index 里::</dt>
-<dd><p class="first">$ vim index.rst</p>
-<p>这一部分主要介绍数据科学的入门内容;包含数据科学的基础工具，如：Jupyter、Linux，以及 Python 基本的数据科学包 Numpy，画图包 Matplotlib;</p>
-<dl class="last docutils">
-<dt>.. toctree::</dt>
-<dd><table class="first docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">maxdepth:</th><td class="field-body">2</td>
-</tr>
-<tr class="field-even field"><th class="field-name">numbered:</th><td class="field-body">2</td>
-</tr>
-</tbody>
-</table>
-<p class="last">01_linux
-02_ipython
-03_numpy
-04_matplotlib
-05_seaborn</p>
-</dd>
-</dl>
-</dd>
-</dl>
+=========================
+
+Jupyter 基础
+=========================
+
+数值计算（Numpy）
+=========================
+
+数据绘图（Matplotlib）
+=========================
+
+数据绘图（Seaborn)
+=========================
+</pre></div>
+</div>
+<p>然后把文件名添加到二级索引 beginning/index 里:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ vim index.rst
+
+入门篇
+============
+
+这一部分主要介绍数据科学的入门内容;\
+包含数据科学的基础工具，如：Jupyter、Linux，以及 Python 基本的数据科学包 Numpy，画图包 Matplotlib;
+
+
+\.\. toctree\:\:
+    :maxdepth: 2
+    :numbered: 2
+
+    01_linux
+    02_ipython
+    03_numpy
+    04_matplotlib
+    05_seaborn
+</pre></div>
+</div>
 <p>同理于 base 和 tool 目录，都完成之后会是下图的效果：
 ￼
 链接：<a class="reference external" href="http://ayuan.readthedocs.io/en/latest/index.html">http://ayuan.readthedocs.io/en/latest/index.html</a> ,有三个索引，下一个，上一个都非常顺畅。

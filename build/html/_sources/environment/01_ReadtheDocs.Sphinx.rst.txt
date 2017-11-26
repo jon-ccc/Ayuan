@@ -27,6 +27,7 @@ Linux 工具教程。
 
 1. 安装 Sphinx
 Mac 系统下安装极简，一行代码搞定::
+
     brew cask install sphinx
     或
     pip install sphinx
@@ -38,7 +39,9 @@ Mac 系统下安装极简，一行代码搞定::
 
 2. 创建工程
 创建工程也就是创建文档。这步很简单，进入需要创建工程的目录，比如我的是 /Users/Scott/Documents/2.创造乐趣, 创建一个名为 DataBook 的文件夹，你可以用别的你想用的名字。
-创建::
+创建
+
+::
 
     $ pwd
     /Users/Scott/Documents/
@@ -48,8 +51,9 @@ Mac 系统下安装极简，一行代码搞定::
     $ cd mydoc
 
 
-输入sphinx-quickstart，接下来程序会提示你输入一些选项，基本上按 Return 就好了，有些地方看提示注意下，不懂的话可以参考这里：建立sphinx工程。::
+输入sphinx-quickstart，接下来程序会提示你输入一些选项，基本上按 Return 就好了，有些地方看提示注意下，不懂的话可以参考这里：建立sphinx工程。
 
+::
 
     $ tree
     ├── Makefile            # 
@@ -68,7 +72,9 @@ Mac 系统下安装极简，一行代码搞定::
 #. make html
 
 配置（conf.py）
-如果没有什么特殊需要，改主题，推荐ReadtheDoc的主题。把 conf.py 里面的这句::
+如果没有什么特殊需要，改主题，推荐ReadtheDoc的主题。把 conf.py 里面的这句
+
+::
 
     html_theme = 'alabaster'
     换成
@@ -76,6 +82,7 @@ Mac 系统下安装极简，一行代码搞定::
 
 
 将 Sphnix 生成的文档和配置 push 到远程 github::
+
     $ git init
     $ git add .
     $ git commit -m "sphinx start"
@@ -90,12 +97,14 @@ Mac 系统下安装极简，一行代码搞定::
        
 ￼
 * 到 ReadtheDocs import 这个仓库，导入成功后，点击阅读文档，便可看到 Web 效果了。
-        没有账号的话就申请一个,官网: https://readthedocs.org
+#.    没有账号的话就申请一个,官网: https://readthedocs.org
 
 
 4. 配置目录结构
 到了这一步，基本上已经搭建了，但这个时候直接写文档是还不够的。目录结构需要配置下。
-假如我要添加两个文档 example.rst 和 rest_eazy.rst 到索引 index.rst 里：::
+假如我要添加两个文档 example.rst 和 rest_eazy.rst 到索引 index.rst 里：
+
+::
 
     .. toctree::
        :maxdepth: 2
@@ -107,10 +116,12 @@ Mac 系统下安装极简，一行代码搞定::
 
 会发现明明是2个文档，左边却 有 3个标题，因为主索引是按一级标题的数量来索引的，所以这种方式不可取，标题一多会很乱，好的办法是创建二级索引：
 因为我要建的板块是3个，分别为数据科学「入门篇」、「基础篇」、「工具篇」，所以先把主索引 index.rst 改为：
-目录：::
+目录：
+
+::
 
     ^^^^^
-    .. toctree::
+    ``.. toctree::``
         :maxdepth: 2
         :glob:
     
@@ -120,6 +131,7 @@ Mac 系统下安装极简，一行代码搞定::
 
 
 然后在 source 目录下创建 3个目录 ，每个目录下创建一个 index.rst 文件，也就是二级索引文件。
+
 ::
 
     $ mkdir beginning base tool
@@ -129,6 +141,7 @@ Mac 系统下安装极简，一行代码搞定::
 做完这步后，把书的大纲理一下，写到 BookData 目录底下的 README.md 文件里：
 
 ::
+
     # Python 和数据科学
     
     ### 全书目录：
@@ -140,13 +153,14 @@ Mac 系统下安装极简，一行代码搞定::
     - 数值计算（Numpy）
     - 数据绘图（Matplotlib）
     - 数据绘图（Seabornd)
-    
+
 
 参照目录创建文件，如 入门篇，则在 beginning 目录下创建如下文件：
 #. touch 01_linux.rst 02_ipython.rst 03_numpy.rst 04_matplotlib.rst 05_seaborn.rst
 每个文件里写上 一级标题，然后检查下：
 
 ::
+
     $ tree beginning -L 1
     beginning
     ├── 01_linux.rst
@@ -174,6 +188,7 @@ Mac 系统下安装极简，一行代码搞定::
 
 
 然后把文件名添加到二级索引 beginning/index 里::
+
     $ vim index.rst
     
     入门篇

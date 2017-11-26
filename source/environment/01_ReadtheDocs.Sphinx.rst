@@ -23,7 +23,9 @@ Linux 工具教程。
 * 精确的语法高亮: 基于 Pygments 自动生成语法高亮
 * 方便离线传送
 更多介绍，请看此处：Sphinx 使用手册。
-", https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
+
+1. https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
+
 注：以下操作默认你熟悉命令行操作。
 
 1. 安装 Sphinx
@@ -39,7 +41,8 @@ Mac 系统下安装极简，一行代码搞定::
 
 
 2. 创建工程
-创建工程也就是创建文档。这步很简单，进入需要创建工程的目录，比如我的是 /Users/Scott/Documents/2.创造乐趣, 创建一个名为 DataBook 的文件夹，你可以用别的你想用的名字。
+创建工程也就是创建文档。这步很简单，进入需要创建工程的目录，比如我的是 /Users/Scott/Documents/
+3. 创造mydoc, 创建一个名为 mydoc 的文件夹，你可以用别的你想用的名字。
 创建
 
 ::

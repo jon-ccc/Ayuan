@@ -1,4 +1,5 @@
-# 如何用 ReadtheDocs、Sphinx 快速搭建写书环境
+如何用 ReadtheDocs、Sphinx 快速搭建写书环境
+========================================
 
     参考: http://www.jianshu.com/p/78e9e1b8553a 
 

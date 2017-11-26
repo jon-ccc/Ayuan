@@ -23,7 +23,7 @@ Linux 工具教程。
 * 精确的语法高亮: 基于 Pygments 自动生成语法高亮
 * 方便离线传送
 更多介绍，请看此处：Sphinx 使用手册。
-#. https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
+#- https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
 注：以下操作默认你熟悉命令行操作。
 
 1. 安装 Sphinx
@@ -70,7 +70,7 @@ Mac 系统下安装极简，一行代码搞定::
 * make.bat 批处理命令
 * makefile
 基本完成，可以生成html形式的文档了:
-#. make html
+#- make html
 
 配置（conf.py）
 如果没有什么特殊需要，改主题，推荐ReadtheDoc的主题。把 conf.py 里面的这句
@@ -98,7 +98,7 @@ Mac 系统下安装极简，一行代码搞定::
        
 ￼
 * 到 ReadtheDocs import 这个仓库，导入成功后，点击阅读文档，便可看到 Web 效果了。
-#.    没有账号的话就申请一个,官网: https://readthedocs.org
+#-    没有账号的话就申请一个,官网: https://readthedocs.org
 
 
 4. 配置目录结构
@@ -157,7 +157,7 @@ Mac 系统下安装极简，一行代码搞定::
 
 
 参照目录创建文件，如 入门篇，则在 beginning 目录下创建如下文件：
-#. touch 01_linux.rst 02_ipython.rst 03_numpy.rst 04_matplotlib.rst 05_seaborn.rst
+#- touch 01_linux.rst 02_ipython.rst 03_numpy.rst 04_matplotlib.rst 05_seaborn.rst
 每个文件里写上 一级标题，然后检查下：
 
 ::

@@ -37,7 +37,7 @@ Linux 工具教程。
 
 注：以下操作默认你熟悉命令行操作。
 
-1. 安装 Sphinx
+安装 Sphinx
 ================
 
 Mac 系统下安装极简，一行代码搞定::
@@ -51,12 +51,12 @@ Mac 系统下安装极简，一行代码搞定::
 
 
 
-2. 创建工程
+创建工程
 ===========
 
 创建工程也就是创建文档。这步很简单，进入需要创建工程的目录，比如我的是 /Users/Scott/Documents/
 
-3. 创造mydoc
+创造mydoc
 ============
 
 创建一个名为 mydoc 的文件夹，你可以用别的你想用的名字。
@@ -89,11 +89,17 @@ Mac 系统下安装极简，一行代码搞定::
 * source 目录 放置文档的源文件
 * make.bat 批处理命令
 * makefile
+
+生成html
+
+
 基本完成，可以生成html形式的文档了:
 
 > make html
 
 配置（conf.py）
+
+
 如果没有什么特殊需要，改主题，推荐ReadtheDoc的主题。把 conf.py 里面的这句
 
 ::
@@ -114,7 +120,8 @@ Mac 系统下安装极简，一行代码搞定::
 
 注意：[yourusename]/[yourrepository] 换成你的 github 名和仓库名。
 
-3. 导入到 ReadtheDocs
+导入到 ReadtheDocs
+==================
 
 * GitHub 里选择仓库，然后依次点击 Setting => Service => Add service => ReadTheDocs,激活这个选项。
        
@@ -124,7 +131,9 @@ Mac 系统下安装极简，一行代码搞定::
 >    没有账号的话就申请一个,官网: https://readthedocs.org
 
 
-4. 配置目录结构
+配置目录结构
+============
+
 到了这一步，基本上已经搭建了，但这个时候直接写文档是还不够的。目录结构需要配置下。
 假如我要添加两个文档 example.rst 和 rest_eazy.rst 到索引 index.rst 里：
 
